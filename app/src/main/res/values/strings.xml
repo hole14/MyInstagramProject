@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Instagram</string>
+    <string name="favorit">Favorite</string>
+    <string name="message">Message</string>
+    <string name="home" />
+    <string name="search" />
+    <string name="unggah" />
+    <string name="reels" />
+    <string name="profile" />
+
+    <style name="font_ig" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/allura_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <string name="judul">Judul</string>
+    <string name="kirim_pesan">Kirim pesan\n</string>
+
+    <string-array name="data_user">
+        <item>username_1</item>
+        <item>username_2</item>
+        <item>username_3</item>
+        <item>username_4</item>
+        <item>username_5</item>
+        <item>username_6</item>
+        <item>username_7</item>
+        <item>username_8</item>
+        <item>username_9</item>
+        <item>username_10</item>
+    </string-array>
+
+    <string-array name="data_profile">
+        <item>@drawable/pp_1</item>
+        <item>@drawable/pp_2</item>
+        <item>@drawable/pp_3</item>
+        <item>@drawable/pp_4</item>
+        <item>@drawable/pp_5</item>
+        <item>@drawable/pp_6</item>
+        <item>@drawable/pp_7</item>
+        <item>@drawable/pp_8</item>
+        <item>@drawable/pp_9</item>
+        <item>@drawable/pp_10</item>
+    </string-array>
+
+    <string-array name="data_status">
+        <item>@drawable/status_1</item>
+        <item>@drawable/status_2</item>
+        <item>@drawable/status_3</item>
+        <item>@drawable/status_4</item>
+        <item>@drawable/status_5</item>
+        <item>@drawable/status_6</item>
+        <item>@drawable/status_7</item>
+        <item>@drawable/status_8</item>
+        <item>@drawable/status_9</item>
+        <item>@drawable/status_10</item>
+    </string-array>
+
+    <string-array name="data_postingan">
+        <item>@drawable/postingan_1</item>
+        <item>@drawable/postingan_2</item>
+        <item>@drawable/postingan_3</item>
+        <item>@drawable/postingan_4</item>
+        <item>@drawable/postingan_5</item>
+        <item>@drawable/postingan_6</item>
+        <item>@drawable/postingan_7</item>
+        <item>@drawable/postingan_8</item>
+        <item>@drawable/postingan_9</item>
+        <item>@drawable/postingan_10</item>
+    </string-array>
+
+</resources>
