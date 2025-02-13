@@ -23,6 +23,7 @@ class DeskripsiStatus : AppCompatActivity() {
 
         val judul = intent.getStringExtra(AdapterStatus.EXTRA_NAME)
         val photo = intent.getIntExtra(AdapterStatus.EXTRA_PHOTO, 0)
+        val poto = intent.getIntExtra(AdapterStatus.EXTRA_POTO, 0)
 
         val user: TextView = findViewById(R.id.textView)
         val profile: CircleImageView = findViewById(R.id.circleImageView2)
@@ -30,7 +31,7 @@ class DeskripsiStatus : AppCompatActivity() {
 
         user.text = judul
         profile.setImageResource(photo)
-        status.setImageResource(photo)
+        status.setImageResource(poto)
 
         val share: ImageView = findViewById(R.id.share)
 
