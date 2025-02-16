@@ -9,7 +9,8 @@
     android:id="@+id/card_buku"
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp"
-    android:background="@color/black">
+    android:background="@color/black"
+    android:layout_margin="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -62,21 +63,22 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <VideoView
+            android:id="@+id/postingan"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:src="@drawable/postingan_1"
+            android:layout_height="480dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-            card_view:ignore="MissingConstraints"
-            card_view:layout_editor_absoluteX="8dp" />
+            card_view:ignore="MissingConstraints" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            android:background="@color/black">
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <ImageView
                 android:id="@+id/like_lagi"
