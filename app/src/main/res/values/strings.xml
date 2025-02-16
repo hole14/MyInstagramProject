@@ -16,7 +16,8 @@
     </style>
 
     <string name="judul">Judul</string>
-    <string name="kirim_pesan">Kirim pesan\n</string>
+    <string name="kirim_pesan">Kirim pesan</string>
+    <string name="searchBar">Cari</string>
 
     <string-array name="data_user">
         <item>username_1</item>
@@ -58,16 +59,29 @@
     </string-array>
 
     <string-array name="data_postingan">
-        <item>@drawable/postingan_1</item>
-        <item>@drawable/postingan_2</item>
-        <item>@drawable/postingan_3</item>
-        <item>@drawable/postingan_4</item>
-        <item>@drawable/postingan_5</item>
-        <item>@drawable/postingan_6</item>
-        <item>@drawable/postingan_7</item>
-        <item>@drawable/postingan_8</item>
-        <item>@drawable/postingan_9</item>
-        <item>@drawable/postingan_10</item>
+        <item>@raw/postingan_1</item>
+        <item>@raw/postingan_2</item>
+        <item>@raw/postingan_3</item>
+        <item>@raw/postingan_4</item>
+        <item>@raw/postingan_5</item>
+        <item>@raw/postingan_6</item>
+        <item>@raw/postingan_7</item>
+        <item>@raw/postingan_8</item>
+        <item>@raw/postingan_9</item>
+        <item>@raw/postingan_10</item>
+    </string-array>
+
+    <string-array name="data_postingan_poto">
+        <item>@drawable/postingan_1_000</item>
+        <item>@drawable/postingan_2_000</item>
+        <item>@drawable/postingan_3_000</item>
+        <item>@drawable/postingan_4_000</item>
+        <item>@drawable/postingan_5_000</item>
+        <item>@drawable/postingan_6_000</item>
+        <item>@drawable/postingan_7_000</item>
+        <item>@drawable/postingan_8_000</item>
+        <item>@drawable/postingan_9_000</item>
+        <item>@drawable/postingan_10_000</item>
     </string-array>
 
 </resources>
