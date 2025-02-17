@@ -3,12 +3,14 @@ package com.example.myinstagramproject.adapter
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
 import android.widget.TextView
 import android.widget.VideoView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myinstagramproject.R
 import com.example.myinstagramproject.fragment.ReelsFragment
@@ -61,11 +63,18 @@ class AdapterPostingan(var list: MutableList<postingan>): RecyclerView.Adapter<A
 
         holder.video.setOnClickListener {
             click?.clikItem(list[holder.adapterPosition])
-            val intent = Intent(holder.itemView.context, ReelsFragment::class.java)
-            intent.putExtra(EXTRA_NAME, judul)
-            intent.putExtra(EXTRA_PHOTO, image)
-            intent.putExtra(EXTRA_VIDEO, video)
-            holder.itemView.context.startActivity(intent)
+            val fragment = ReelsFragment().apply {
+                arguments = Bundle().apply {
+                    putString(EXTRA_NAME, judul)
+                    putInt(EXTRA_PHOTO, image)
+                    putInt(EXTRA_VIDEO, video)
+                }
+            }
+            val activity = holder.itemView.context as AppCompatActivity
+            activity.supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .addToBackStack(null)
+                .commit()
         }
 
     }
