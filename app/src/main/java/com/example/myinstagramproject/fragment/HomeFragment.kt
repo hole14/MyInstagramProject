@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,6 +19,8 @@ import com.example.myinstagramproject.databinding.FragmentHomeBinding
 import com.example.myinstagramproject.view_model.HomeViewModel
 
 class HomeFragment : Fragment() {
+
+    private lateinit var border: ImageView
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
