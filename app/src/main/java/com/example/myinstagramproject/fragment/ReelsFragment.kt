@@ -1,5 +1,6 @@
 package com.example.myinstagramproject.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,7 +19,7 @@ class ReelsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentReelsBinding.inflate(layoutInflater, container, false)
+        binding = FragmentReelsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -29,20 +30,19 @@ class ReelsFragment : Fragment() {
         val photo = arguments?.getInt(AdapterPostingan.EXTRA_PHOTO)
         val video = arguments?.getInt(AdapterPostingan.EXTRA_VIDEO)
 
-        val judulReels: TextView = view.findViewById(R.id.user_reels)
-        val ppReels: CircleImageView = view.findViewById(R.id.pp_reels)
-        val videoReels: VideoView = view.findViewById(R.id.videoku)
-
-        judulReels.text = judul
-        ppReels.setImageResource(photo!!)
-        videoReels.setVideoPath("android.resource://${requireActivity().packageName}/$video")
-
-        videoReels.start()
-        videoReels.setOnPreparedListener { mp ->
-            mp.isLooping = true
+        binding.userReels.text = judul
+        photo?.let {
+            binding.ppReels.setImageResource(it)
         }
-        videoReels.setOnCompletionListener {
-            videoReels.start()
+        video?.let {
+            binding.videoku.setVideoPath("android.resource://${requireActivity().packageName}/$it")
+            binding.videoku.start()
+            binding.videoku.setOnPreparedListener { mp ->
+                mp.isLooping = true
+            }
+            binding.videoku.setOnCompletionListener {
+                binding.videoku.start()
+            }
         }
     }
 }
